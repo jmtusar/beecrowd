@@ -1,18 +1,19 @@
-
-#include <stdio.h>
-#include <math.h>
-
+#include<stdio.h>
+#include<math.h>
 int main()
 {
-    double a, b, c, t;
-    scanf("%lf %lf %lf", &a, &b, &c);
+    double A,B,C;
+    double R1,R2;
+    scanf("%lf%lf%lf",&A,&B,&C);
+    if(((B*B)-(4*A*C))<0 || A==0){
 
-    if(((b * b) - 4 * a * c) < 0 || a == 0){
-        printf("Impossivel calcular\n");
+    printf("Impossivel calcular\n");
     }
     else{
-        t = sqrt((b * b) - 4 * a * c);
-        printf("R1 = %.5lf\nR2 = %.5lf\n", ((-b + t) / (2 * a)), ((-b - t) / (2 * a)));
+    R1=((-B+(sqrt(B*B-4*A*C)))/(2*A));
+    R2=((-B-(sqrt(B*B-4*A*C)))/(2*A));
+    printf("R1 = %0.5lf\n",R1);
+    printf("R2 = %0.5lf\n",R2);
     }
     return 0;
 }
